@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #fcd34d, #f87171, #60a5fa);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #1d4ed8;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+#status {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  min-height: 24px;
+  transition: all 0.3s;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f3f4f6;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+  background-color: #c7d2fe;
+  transform: scale(1.05);
+}
+
+.cell.X {
+  color: #ef4444; /* red */
+  font-weight: bold;
+}
+
+.cell.O {
+  color: #10b981; /* green */
+  font-weight: bold;
+}
+
+button {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2563eb, #7e22ce);
+  transform: scale(1.05);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f3f4f6;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid #e5e7eb; /* light border for grid lines */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.cell:hover {
+  background-color: #c7d2fe;
+  transform: scale(1.05);
+}
